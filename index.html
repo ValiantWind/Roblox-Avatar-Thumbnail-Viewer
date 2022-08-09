@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roblox Thumbnail Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    @import url('http://fonts.cdnfonts.com/css/gotham');
+  </style>
+  <body>
+    <div class="main">
+      <h1>Roblox Avatar Thumbnail Viewer</h1>
+      <input type="text" name="" id="inputUserId" autocomplete="off" placeholder="Input User ID Here"/>
+      <label for="size">Choose a Thumbnail Size:</label>
+  <select name="size" id="size">
+    <option value="30x30">30 x 30</option>
+    <option value="48x48">48 x 48</option>
+    <option value="60x60">60 x 60</option>
+    <option value="75x75">75 x 75</option>
+    <option value="100x100">100 x 100</option>
+    <option value="110x110">110 x 110</option>
+    <option value="140x140">140 x 140</option>
+    <option value="150x150">150 x 150</option>
+    <option value="150x200">150 x 200</option>
+    <option value="180x180">180 x 180</option>
+    <option value="352x352">352 x 352</option>
+    <option value="420x420">420 x 420</option>
+    <option value="720x720">720 x 720</option>
+  </select>
+      <label for="fileFormat">Choose a File Format for the Thumbnail:</label>
+  <select name="fileFormat" id="fileFormat">
+    <option value="Png">PNG</option>
+    <option value="Jpeg">JPG/JPEG</option>
+  </select>
+      <label for="isCircular">Circular Thumbnail?</label>
+  <select name="isCircular" id="isCircular">
+    <option value="true">Yes</option>
+    <option value="false">No</option>
+  </select>
+      
+      <button type="submit" onclick="generate()" id="submit">
+        Generate Thumbnail
+      </button>
+      <img src="" alt="" id="thumbnail">
+      <button type="submit" onclick="copyUrl()" id="copyUrlButton">
+        Copy Image URL
+      </button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+<script src="script.js"></script>
+  </body>
+</html>
