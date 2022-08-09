@@ -19,7 +19,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*background: linear-gradient(19deg,#0080ff 0%,#00c1c1); */
     background: rgba(18, 18, 18, 1);
 }
 h1{
@@ -44,17 +43,6 @@ input{
     font-family: 'Gotham Screen Smart', sans-serif;
 }
 button{
-/*     width: 150px;
-    height: 40px;
-    font-size: 1.1rem;
-    margin: 15px;
-    cursor: pointer;
-    outline: none;
-    background-color: #2BB1FF;
-    color: #171717;
-    border: none;
-    border-radius: 8px;
-    font-family: Arial, sans-serif; */
   border: none;
   cursor: pointer;
   color: #171717;
@@ -66,7 +54,7 @@ button{
   font-style: normal;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   font-family: 'Gotham Screen Smart', Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
-  /*font-weight: 500;*/
+  font-weight: 500;
   line-height: 24px;
   font-display: swap;
   border-radius: 4px;
