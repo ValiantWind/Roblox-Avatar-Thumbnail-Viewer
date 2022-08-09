@@ -40,7 +40,6 @@ var url = `https://thumbnails.roproxy.com/v1/users/avatar?userIds=${userId}&size
   .then(response => {
     
     imageUrl = response.data.data[0].imageUrl
-
     navigator.clipboard.writeText(imageUrl);
     
   })
