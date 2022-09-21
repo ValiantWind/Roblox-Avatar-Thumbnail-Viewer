@@ -1,22 +1,23 @@
-function generate(){
+async function generate(){
 
   var userId = document.getElementById("inputUserId").value;
 var size = document.getElementById("size").value;
 var fileFormat = document.getElementById("fileFormat").value;
 var isCircular = document.getElementById("isCircular").value;
 var thumbnail = document.getElementById("thumbnail");
-var url = `https://thumbnails.roproxy.com/v1/users/avatar?userIds=${userId}&size=${size}&format=${fileFormat}&isCircular=${isCircular}`;
+var url = `https://roproxy.valiantwind.repl.co/thumbnails/v1/users/avatar?userIds=${userId}&size=${size}&format=${fileFormat}&isCircular=${isCircular}`;
   var generateButton = document.getElementById("submit");;
-
-
-  axios.get(url)
+	
+  await fetch(url)
   .then(response => {
     // access parsed JSON response data using response.data field
-    imageUrl = response.data.data[0].imageUrl
+    // imageUrl = response.data.data[0].imageUrl
 
-    //console.log(data[0].imageUrl)
+    // console.log(response.data.data[0].imageUrl)
 
-   thumbnail.src = imageUrl
+		console.log(response)
+
+   // thumbnail.src = imageUrl
   })
   .catch(error => {
 
@@ -48,7 +49,7 @@ var url = `https://thumbnails.roproxy.com/v1/users/avatar?userIds=${userId}&size
   .then(response => {
     
     imageUrl = response.data.data[0].imageUrl
-    navigator.clipboard.writeText(imageUrl);
+    navigator.clipboard.writeText("https://google.com");
 
     copyButton.innerHTML = "Copied!"
 
