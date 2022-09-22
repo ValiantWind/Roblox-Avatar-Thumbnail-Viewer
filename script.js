@@ -1,4 +1,4 @@
-async function generate(){
+function generate(){
 
   var userId = document.getElementById("inputUserId").value;
 var size = document.getElementById("size").value;
@@ -8,16 +8,18 @@ var thumbnail = document.getElementById("thumbnail");
 var url = `https://roproxy.valiantwind.repl.co/thumbnails/v1/users/avatar?userIds=${userId}&size=${size}&format=${fileFormat}&isCircular=${isCircular}`;
   var generateButton = document.getElementById("submit");;
 	
-  await fetch(url)
+  axios.get(url)
   .then(response => {
+
     // access parsed JSON response data using response.data field
     // imageUrl = response.data.data[0].imageUrl
 
     // console.log(response.data.data[0].imageUrl)
 
-		console.log(response)
+		console.log(response.json())
 
    // thumbnail.src = imageUrl
+		
   })
   .catch(error => {
 
