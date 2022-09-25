@@ -35,35 +35,6 @@ var url = `https://roproxy.valiantwind.repl.co/thumbnails/v1/users/avatar?userId
 
   }
 
-function copyUrl(){
-  var userId = document.getElementById("inputUserId").value;
-  var userId = document.get
-var size = document.getElementById("size").value;
-var fileFormat = document.getElementById("fileFormat").value;
-var isCircular = document.getElementById("isCircular").value;
-var url = `https://thumbnails.roproxy.com/v1/users/avatar?userIds=${userId}&size=${size}&format=${fileFormat}&isCircular=${isCircular}`;
-  var copyButton = document.getElementById("copyUrlButton")
-
-
-
-  
-  axios.get(url)
-  .then(response => {
-    
-    imageUrl = response.data.data[0].imageUrl
-    navigator.clipboard.writeText("https://google.com");
-
-    copyButton.innerHTML = "Copied!"
-
-    setTimeout(() => {
-  copyButton.innerHTML = "Copy Image Url"
-}, 2000);
-    
-  })
-  .catch(error => {
-    console.log(error)
-  })
-  }
 
 function createRipple(event) {
   const button = event.currentTarget;
