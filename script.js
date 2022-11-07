@@ -11,14 +11,7 @@ var url = `https://roproxy.valiantwind.repl.co/thumbnails/v1/users/avatar?userId
   axios.get(url)
   .then(response => {
 
-    // access parsed JSON response data using response.data field
-    // imageUrl = response.data.data[0].imageUrl
-
-    // console.log(response.data.data[0].imageUrl)
-
-		console.log(response.json())
-
-   // thumbnail.src = imageUrl
+thumbnail.src = response.data.data[0].imageUrl;
 		
   })
   .catch(error => {
