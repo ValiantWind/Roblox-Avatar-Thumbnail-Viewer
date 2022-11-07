@@ -12,6 +12,10 @@
     font-style: normal;
   }
 
+body {
+	background: rgba(18, 18, 18, 1);
+}
+
 .main{
     width: 100%;
     height: 100vh;
