@@ -1,12 +1,9 @@
 @font-face {
     font-family: 'Gotham Screen Smart';
     src: local('Gotham Screen Smart Book'), local('Gotham-Screen-Smart-Book'),
-        url('https://ValiantWind.github.io/Roblox-Avatar-Thumbnail-Viewer/fonts/GothamSSm-Book.woff2') format('woff2'),
-        url('https://ValiantWind.github.io/Roblox-Avatar-Thumbnail-Viewer/fonts/GothamSSm-Book.woff') format('woff'),
-        url('https://ValiantWind.github.io/Roblox-Avatar-Thumbnail-Viewer/fonts/GothamSSm-Book.ttf') format('truetype');
+        url('/fonts/GothamSSm-Book.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-		font-display: swap;
   }
 
 body {
@@ -88,8 +85,6 @@ select{
   border: none;
   box-sizing: content-box;
 }
-
-
 label{
      color: white;
     margin: 15px;
