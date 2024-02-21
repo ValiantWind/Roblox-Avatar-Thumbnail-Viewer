@@ -9,20 +9,49 @@
 
 body {
 	background: rgba(18, 18, 18, 1);
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 .main{
     width: 100%;
     height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: rgba(18, 18, 18, 1);
+		/* align-self: center; */
+		/* margin-left: 200px; */
+		display: flex;
+  /* justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Set the container height to the full viewport height */ */
 }
+
+/* .options {
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+	
+} */
+
+.options {
+	display: flex;
+  padding: 100px; /* Adjust padding as needed */
+  text-align: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.hidden {
+	display: none;
+}
+
 h1{
     color: white;
     margin: 15px;
+		margin-top: 20px;
     font-family: 'Gotham Screen Smart', sans-serif;
     font-size: 24px;
     font-style: normal;
@@ -39,8 +68,8 @@ input{
     outline: none;
     font-size: 1.2rem;
     color: white;
-    padding: 0 10px;
     font-family: 'Gotham Screen Smart', sans-serif;
+		/* display: flex; */
 }
 
 button {
@@ -52,12 +81,13 @@ button {
   padding: 1rem 2rem;
   font-family: 'Gotham Screen Smart', Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
   font-size: 1.5rem;
-	margin: 5px;
+	margin: 15px;
   outline: 0;
   border: 0;
   border-radius: 0.25rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
   cursor: pointer;
+	/* display: flex; */
 }
 
 span.ripple {
@@ -86,10 +116,14 @@ select{
   background-color: #171717;
   color: white;
   border: none;
-  box-sizing: content-box;
+  box-sizing: border-box;
+	font-size: 1.1rem;
+	text-align: center;
+	margin: 15px;
 }
+
 label{
-     color: white;
+    color: white;
     margin: 15px;
     font-family: 'Gotham Screen Smart', sans-serif;
     font-size: 18px;
@@ -98,6 +132,34 @@ label{
     line-height: 140%;
 }
 
-img{
+/* .thumbnail{
   margin: 15px;
+	margin-right: 300px;
+	margin-bottom: 500px;
+	float: right;
+	/* display: flex;
+	/* position: relative; */
+/* 
+.container {
+   	display: flex;
+		float: right;
+		
+} */
+
+/* .img-container {
+  flex-direction: column;
+  justify-content: center;
+	margin-left: 75%;
+  position: absolute;
+	height: auto;
+	width: auto;
+	display: flex;
+}
+ */
+
+.thumbnail {
+	max-width: 100%; /* Ensure the image doesn't expand beyond its original size */
+  height: auto; /* Maintain the image's aspect ratio */
+  display: block; /* Remove any extra spacing below the image */
+  margin: 0 auto; /* Center the image horizontally */
 }
