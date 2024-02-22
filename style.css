@@ -14,31 +14,26 @@ body {
 	padding: 0;
 }
 
-.main{
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: rgba(18, 18, 18, 1);
-		/* align-self: center; */
-		/* margin-left: 200px; */
-		display: flex;
-  /* justify-content: space-between;
-  align-items: center;
-  height: 100vh; /* Set the container height to the full viewport height */ */
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+	padding: 20px;
 }
 
-/* .options {
+.main {
+	width: 50%;
+	height: 100%;
 	display: flex;
-  flex-direction: column;
-  justify-content: center;
-	
-} */
+	flex-direction: column;
+	align-items: center;
+	background: rgba(18, 18, 18, 1);
+}
 
 .options {
 	display: flex;
-  padding: 100px; /* Adjust padding as needed */
+  padding: 100px;
   text-align: center;
 	flex-direction: column;
 	justify-content: center;
@@ -59,6 +54,16 @@ h1{
     line-height: 140%;
 }
 
+h4{
+		color: white;
+		margin: 15px;
+		margin-top: 20px;
+		font-family: 'Gotham Screen Smart', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 140%;
+}
+
 input{
     width: 300px;
     height: 40px;
@@ -69,7 +74,6 @@ input{
     font-size: 1.2rem;
     color: white;
     font-family: 'Gotham Screen Smart', sans-serif;
-		/* display: flex; */
 }
 
 button {
@@ -87,7 +91,6 @@ button {
   border-radius: 0.25rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
   cursor: pointer;
-	/* display: flex; */
 }
 
 span.ripple {
@@ -132,34 +135,46 @@ label{
     line-height: 140%;
 }
 
-/* .thumbnail{
-  margin: 15px;
-	margin-right: 300px;
-	margin-bottom: 500px;
-	float: right;
-	/* display: flex;
-	/* position: relative; */
-/* 
-.container {
-   	display: flex;
-		float: right;
-		
-} */
-
-/* .img-container {
-  flex-direction: column;
-  justify-content: center;
-	margin-left: 75%;
-  position: absolute;
-	height: auto;
-	width: auto;
-	display: flex;
-}
- */
-
 .thumbnail {
-	max-width: 100%; /* Ensure the image doesn't expand beyond its original size */
-  height: auto; /* Maintain the image's aspect ratio */
-  display: block; /* Remove any extra spacing below the image */
-  margin: 0 auto; /* Center the image horizontally */
+	max-width: 50%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.thumbnail img {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.main {
+		width: 100%;
+		padding: 20px;
+	}
+
+	.thumbnail {
+		max-width: 100%;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.thumbnail img {
+		width: 100%;
+		height: 100%;
+	}
 }
